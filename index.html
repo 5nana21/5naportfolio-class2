@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="디자인과 코드로 더 나은 일상을 만드는 프로덕트 디자이너 김민서의 포트폴리오입니다."
+      content="디자인과 코드로 더 나은 일상을 만드는 프로덕트 디자이너 오나현의 포트폴리오입니다."
     />
     <meta name="theme-color" content="#f6f5f0" />
     <title>오나현 | 디자이너 &amp; 프런트엔드 개발자</title>
@@ -21,7 +21,7 @@
   <body>
     <header class="site-header">
       <nav class="nav shell" aria-label="주요 메뉴">
-        <a class="wordmark" href="#home" aria-label="김민서 포트폴리오 홈">minseo<span>.</span></a>
+        <a class="wordmark" href="#home" aria-label="오나현 포트폴리오 홈">nahteon<span>.</span></a>
         <div class="nav-links">
           <a href="#about">소개</a>
           <a href="#projects">프로젝트</a>
@@ -48,7 +48,7 @@
       <section class="hero shell" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot"></span> 서울에서 작업하고 있어요</p>
-          <h1 id="hero-title">안녕하세요,<br />김민서입니다<span class="accent">.</span></h1>
+          <h1 id="hero-title">안녕하세요,<br />오나현입니다<span class="accent">.</span></h1>
           <p class="hero-description">
             사용자에게 필요한 경험을 세심하게 디자인하고,<br class="desktop-break" />
             코드로 자연스럽게 연결하는 <strong>프로덕트 디자이너</strong>입니다.
@@ -68,13 +68,13 @@
             <div><span class="meta-number">02</span><span class="meta-label">커피 섭취량 / 일</span></div>
           </div>
         </div>
-        <div class="hero-art" aria-label="김민서의 프로필 카드" role="img">
+        <div class="hero-art" aria-label="오나현의 프로필 카드" role="img">
           <div class="art-orbit orbit-one"></div>
           <div class="art-orbit orbit-two"></div>
           <div class="profile-card">
             <div class="profile-card-top"><span>PROFILE / 2025</span><span class="profile-sparkle">✳</span></div>
-            <div class="profile-avatar" aria-hidden="true">M<span>.</span></div>
-            <p class="profile-name">Minseo Kim</p>
+            <div class="profile-avatar" aria-hidden="true">N<span>.</span></div>
+            <p class="profile-name">Nahteon Oh</p>
             <p class="profile-role">Designer who loves details.</p>
             <div class="profile-tags"><span>UX/UI</span><span>FRONTEND</span><span>BRANDING</span></div>
           </div>
@@ -103,7 +103,7 @@
           </div>
           <div class="project-grid">
             <article class="project-card" data-category="design development">
-              <a class="project-visual visual-sprout" href="#contact" aria-label="새싹마켓 프로젝트 문의하기">
+              <a class="project-visual visual-sprout" href="#project-detail" aria-label="새싹마켓 프로젝트 자세히 보기" aria-haspopup="dialog" aria-controls="project-detail">
                 <div class="sprout-window">
                   <div class="mockup-topbar"><span></span><span></span><span></span><b>sprout market</b></div>
                   <div class="sprout-content">
@@ -124,7 +124,7 @@
             </article>
 
             <article class="project-card" data-category="design">
-              <a class="project-visual visual-morrow" href="#contact" aria-label="Morrow 프로젝트 문의하기">
+              <a class="project-visual visual-morrow" href="#project-detail" aria-label="Morrow 프로젝트 자세히 보기" aria-haspopup="dialog" aria-controls="project-detail">
                 <div class="morrow-phone">
                   <div class="phone-island"></div>
                   <span class="morrow-day">MONDAY · 09:41</span>
@@ -143,11 +143,11 @@
             </article>
 
             <article class="project-card" data-category="design development">
-              <a class="project-visual visual-tide" href="#contact" aria-label="Tide 프로젝트 문의하기">
+              <a class="project-visual visual-tide" href="#project-detail" aria-label="Tide 프로젝트 자세히 보기" aria-haspopup="dialog" aria-controls="project-detail">
                 <div class="tide-dashboard">
                   <div class="tide-sidebar"><span class="tide-logo">t.</span><i></i><i></i><i></i><i></i></div>
                   <div class="tide-main">
-                    <div class="tide-heading"><span>Good morning, Minseo</span><b>↗</b></div>
+                    <div class="tide-heading"><span>Good morning, Nahteon</span><b>↗</b></div>
                     <div class="tide-stat"><span>THIS MONTH</span><strong>₩ 2,480,000</strong><span class="stat-up">↗ 12.8%</span></div>
                     <div class="tide-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                   </div>
@@ -165,14 +165,47 @@
         </div>
       </section>
 
+      <dialog class="project-dialog" id="project-detail" aria-labelledby="dialog-title">
+        <div class="dialog-content">
+          <div class="dialog-topline">
+            <p class="eyebrow">PROJECT / DETAILS</p>
+            <button class="dialog-close" type="button" aria-label="상세 창 닫기">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          <div class="dialog-heading">
+            <h2 id="dialog-title"></h2>
+            <span class="dialog-year"></span>
+          </div>
+          <p class="dialog-description"></p>
+          <div class="dialog-meta">
+            <div>
+              <span class="dialog-label">ROLE</span>
+              <p class="dialog-role"></p>
+            </div>
+            <div>
+              <span class="dialog-label">SCOPE</span>
+              <div class="dialog-tags tag-list"></div>
+            </div>
+          </div>
+          <div class="dialog-highlights">
+            <h3>프로젝트 포인트</h3>
+            <ul></ul>
+          </div>
+          <a class="button button-primary dialog-contact" href="#contact">프로젝트 문의하기 <span aria-hidden="true">↗</span></a>
+        </div>
+      </dialog>
+
       <section class="contact-section shell" id="contact" aria-labelledby="contact-title">
         <div class="contact-card">
           <div class="contact-content">
             <p class="eyebrow">HAVE A GOOD IDEA?</p>
             <h2 id="contact-title">좋은 이야기는<br />언제나 환영이에요<span class="accent">.</span></h2>
             <p>새로운 프로젝트, 재미있는 협업, 가벼운 인사까지<br class="desktop-break" />편하게 연락 주세요. 함께할 방법을 찾아볼게요.</p>
-            <a class="button button-light" href="mailto:hello@minseokim.dev">
-              hello@minseokim.dev
+            <a class="button button-light" href="mailto:hello@nahteonoh.dev">
+              hello@nahteonoh.dev
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" /></svg>
             </a>
           </div>
@@ -183,9 +216,9 @@
     </main>
 
     <footer class="site-footer shell">
-      <a class="wordmark" href="#home">minseo<span>.</span></a>
+      <a class="wordmark" href="#home">nahteon<span>.</span></a>
       <p>조금씩, 더 좋은 경험을 만듭니다.</p>
-      <span>© <span id="current-year"></span> Minseo Kim</span>
+      <span>© <span id="current-year"></span> Nahteon Oh</span>
     </footer>
   </body>
 </html>

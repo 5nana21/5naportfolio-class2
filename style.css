@@ -171,6 +171,7 @@ svg { display: block; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; padding-top: 26px; }
 .project-card[hidden] { display: none; }
 .project-visual { position: relative; display: grid; height: 250px; overflow: hidden; place-items: center; border-radius: 7px; }
+.project-visual:focus-visible, .dialog-close:focus-visible { outline: 2px solid #8ebc41; outline-offset: 4px; }
 .visual-sprout { background: #dce9cc; }
 .visual-morrow { background: #e8dff0; }
 .visual-tide { background: #d9e8e7; }
@@ -231,6 +232,56 @@ svg { display: block; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 5px; }
 .tag-list span { padding: 5px 7px; border: 1px solid var(--line); border-radius: 3px; color: var(--muted); font-size: 8px; }
 
+.project-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: min(720px, calc(100% - 32px));
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.project-dialog::backdrop { background: rgb(22 25 20 / 58%); backdrop-filter: blur(4px); }
+.dialog-content { padding: 30px; }
+.dialog-topline { display: flex; align-items: center; justify-content: space-between; }
+.dialog-topline .eyebrow { margin: 0; }
+.dialog-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--page);
+  cursor: pointer;
+}
+.dialog-close svg { width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 1.7; }
+.dialog-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 24px; }
+.dialog-heading h2 {
+  margin: 0;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Nanum Pen Script", "Noto Sans KR", cursive;
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+.dialog-year { color: var(--muted); font-size: 11px; }
+.dialog-description { margin: 13px 0 24px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.dialog-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-block: 18px; border-block: 1px solid var(--line); }
+.dialog-label { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.dialog-role { margin: 8px 0 0; font-size: 11px; font-weight: 600; line-height: 1.7; }
+.dialog-tags { margin-top: 8px; }
+.dialog-highlights { margin-top: 24px; }
+.dialog-highlights h3 { margin: 0 0 12px; font-size: 13px; }
+.dialog-highlights ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.dialog-highlights li { position: relative; padding-left: 17px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.dialog-highlights li::before { position: absolute; left: 0; color: #8ebc41; content: "✳"; }
+.dialog-contact { margin-top: 25px; }
+
 .contact-section { padding-block: 90px; }
 .contact-card { position: relative; min-height: 300px; overflow: hidden; display: flex; align-items: center; padding: 48px 60px; border-radius: 9px; background: #252920; color: #f6f5f0; }
 .contact-content { position: relative; z-index: 1; }
@@ -289,6 +340,9 @@ svg { display: block; }
   .project-grid { grid-template-columns: 1fr; gap: 28px; }
   .project-visual { height: 245px; }
   .project-info > p { min-height: 0; }
+  .dialog-content { padding: 22px; }
+  .dialog-heading h2 { font-size: 34px; }
+  .dialog-meta { grid-template-columns: 1fr; gap: 14px; }
   .contact-section { padding-block: 48px; }
   .contact-card { min-height: 300px; padding: 36px 25px; }
   .contact-content h2 { font-size: 30px; letter-spacing: -1.5px; }
