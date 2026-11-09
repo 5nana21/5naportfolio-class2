@@ -222,5 +222,11 @@
       <a class="footer-link" href="https://career.rememberapp.co.kr/job/postings" target="_blank" rel="noopener noreferrer">Remember</a>
       <span>© <span id="current-year"></span> Nahyeon Oh</span>
     </footer>
+
+    <script>
+      // Update the current year in the footer
+      const currentYear = new Date().getFullYear();
+      document.getElementById('current-year').textContent = currentYear;
+    </script>
   </body>
 </html>
